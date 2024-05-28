@@ -1,0 +1,1 @@
+$input = $this->request->getPost('input_name', FILTER_SANITIZE_STRING);

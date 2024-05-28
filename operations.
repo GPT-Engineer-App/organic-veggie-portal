@@ -1,0 +1,77 @@
+// app/Controllers/Home.php
+namespace App\Controllers;
+use App\Models\ProductModel;
+
+class Home extends BaseController {
+    public function index() {
+        $productModel = new ProductModel();
+        $data['products'] = $productModel->orderBy('likes', 'DESC')->findAll();
+        return view('home', $data);
+    }
+}
+
+// app/Controllers/Auth.php
+namespace App\Controllers;
+use App\Models\UserModel;
+
+class Auth extends BaseController {
+    public function login() {
+        // Handle login logic
+    }
+
+    public function register() {
+        // Handle registration logic
+    }
+
+    public function logout() {
+        // Handle logout logic
+    }
+}
+
+// app/Controllers/Product.php
+namespace App\Controllers;
+use App\Models\ProductModel;
+
+class Product extends BaseController {
+    public function create() {
+        // Handle product creation logic
+    }
+
+    public function update($id) {
+        // Handle product update logic
+    }
+
+    public function delete($id) {
+        // Handle product deletion logic
+    }
+}
+
+// app/Controllers/Like.php
+namespace App\Controllers;
+use App\Models\LikeModel;
+
+class Like extends BaseController {
+    public function like($productId) {
+        // Handle like logic
+    }
+}
+
+// app/Controllers/Comment.php
+namespace App\Controllers;
+use App\Models\CommentModel;
+
+class Comment extends BaseController {
+    public function comment($productId) {
+        // Handle comment logic
+    }
+}
+
+// app/Controllers/Cart.php
+namespace App\Controllers;
+use App\Models\CartModel;
+
+class Cart extends BaseController {
+    public function addToCart($productId) {
+        // Handle add to cart logic
+    }
+}
